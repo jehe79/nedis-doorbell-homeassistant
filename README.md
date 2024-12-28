@@ -29,6 +29,7 @@ Inside the chime there are 3 main IC's where #1 seems to handle RF, #2 the main 
 ### Wire
 After some trouble with GPIO's not responding - even on manual triggering I finally got things working. 
 It seemed like the the 5th leg of IC #3 (speaker chip) was connected to the main controller (#2) via some filter components - this is where I connected my ESP.
+
 Thanks to my interest in FPV drones I had a lot of spare connectors where I could make a split cable for the USB power. There are no solder points for the power connector so this was the best solution until I knew it worked. 
 
 <img src="https://github.com/jehe79/nedis-doorbell-homeassistant/blob/main/images/chime_pin_solder.jpg?raw=true" alt="Pin to solder inside chime" width="400"/>
