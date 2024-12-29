@@ -9,6 +9,7 @@ If you appreciate this project, consider [buying me a coffee](https://www.buymea
 * Nedis SmartLife door chime [link](https://nedis.com/en-us/product/safety-and-security/doorbells/wireless-doorbells/550702011/smartlife-chime-wi-fi-accessory-for-wificdp10gy-wificdp30wt-wificdp40cwt-usb-powered-4-sounds-5-v-dc-adjustable-volume-black) [amazon SE](https://www.amazon.se/-/en/Nedis-Ficdpc10Bk-Wireless-Doorbell-Accessories/dp/B07NDVKS6Z)
 * Any ESPHome compatible device like ESP32 D1 Mini [link](https://www.amazon.se/AZDelivery-WiFi-Modul-Bluetooth-Development-kompatibel/dp/B08BTRQNB3?th=1)
 * A few wires, soldering skills and/or connectors
+* A small resistor 1 - 10k
 
 ## Onvif events - doesn't seem to work
 The doorbell has onvif support but it seems incomplete and I didn't get it to work.
@@ -29,6 +30,9 @@ Inside the chime there are 3 main IC's where #1 seems to handle RF, #2 the main 
 ### Wire
 After some trouble with GPIO's not responding - even on manual triggering I finally got things working. 
 It seemed like the the 5th leg of IC #3 (speaker chip) was connected to the main controller (#2) via some filter components - this is where I connected my ESP.
+
+### Resistor
+When done - I got thinking of common practise on connecting GPIOs and added a 1k resistor on the GPIO wire. It's probably not needed since it should be included on the circuit board, but it won't do any harm.
 
 Thanks to my interest in FPV drones I had a lot of spare connectors where I could make a split cable for the USB power. There are no solder points for the power connector so this was the best solution until I knew it worked. 
 
