@@ -31,9 +31,6 @@ Inside the chime there are 3 main IC's where #1 seems to handle RF, #2 the main 
 After some trouble with GPIO's not responding - even on manual triggering I finally got things working. 
 It seemed like the the 5th leg of IC #3 (speaker chip) was connected to the main controller (#2) via some filter components - this is where I connected my ESP.
 
-### Resistor
-When done - I got thinking of common practise on connecting GPIOs and added a 1k resistor on the GPIO wire. It's probably not needed since it should be included on the circuit board, but it won't do any harm.
-
 Thanks to my interest in FPV drones I had a lot of spare connectors where I could make a split cable for the USB power. There are no solder points for the power connector so this was the best solution until I knew it worked. 
 
 <img src="https://github.com/jehe79/nedis-doorbell-homeassistant/blob/main/images/chime_pin_solder.jpg?raw=true" alt="Pin to solder inside chime" width="400"/>
@@ -41,6 +38,9 @@ Thanks to my interest in FPV drones I had a lot of spare connectors where I coul
 <img src="https://github.com/jehe79/nedis-doorbell-homeassistant/blob/main/images/esp32_wire.jpg?raw=true" alt="ESP32 wire" width="400"/>
 
 <img src="https://github.com/jehe79/nedis-doorbell-homeassistant/blob/main/images/chime_connected.jpg?raw=true" alt="Chime and esp connected" width="400"/>
+
+#### Resistor
+When done - I got thinking of common practise on connecting GPIOs and added a 1k resistor on the GPIO wire. It's probably not needed since it should be included on the circuit board, but it won't do any harm.
 
 ### ESPHome
 If you havn't looked into [ESPHome](https://esphome.io/index.html) yet - you better do!
